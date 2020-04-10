@@ -3,6 +3,14 @@ const axios = require("axios");
 const inquirer = require("inquirer");
 const generateMD = require("./utils/generateMarkDown");
 let info={};
+
+var config = {
+  headers : {
+    'Authorization' : 'token beb2332676472d14b098c4e246784b018ee1d4fd',
+  }
+}
+
+const gitAPI = 'beb2332676472d14b098c4e246784b018ee1d4fd';
 const questions = [
     {
         type:"input",
@@ -54,12 +62,12 @@ async function promptForInfo(){
   let response = await inquirer.prompt(questions)
     info = response;
     //console.log(generateMD(info));
-    info.queryUrl = `https://api.github.com/users/${response.username}`; 
+    info.queryUrl = `https://api.github.com/users/${info.username}`; 
     axios
-      .get(info.queryUrl).then((response) => {
-        //info.avatar_url = response.avatar_url;
-        //console.log(response.avatar_url);
-        console.log(response.data.avatar_url);
+      .get(info.queryUrl, config).then((response) => {
+        console.log(response.data.email);
+        info.avatar_url = response.data.avatar_url;
+        info.userEmail = response.data.email;
         let data = generateMD(info);
         writeToFile(data);
       })

@@ -37,8 +37,9 @@ ${data.test}
 
 ## Questions
 
-<img src = "">
+<img src = "${data.avatar_url}" width="50px">
 
+Email Address: ${data.userEmail}
 `;
 }
 

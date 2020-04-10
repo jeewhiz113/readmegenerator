@@ -1,9 +1,9 @@
 
-# ads
+# Title of Project
 
 ## Description
 
-fa
+Some Description
 
 ## Table of Contents
 
@@ -16,25 +16,26 @@ fa
 
 ## Installation
 
-g
+1, 2, 3, 4, 5, 6, 7
 
 ## Usage
 
-aer
+use to generate markdown from a user's github repo
 
 ## License
 
-aer
+I am not sure what to put here
 
 ## Contribution
 
-hae
+Guidelines 1, 2, 3, 4, 5, 6, 7
 
 ## Tests
 
-rha
+test.js
 
 ## Questions
 
-<img src = "">
+<img src = "https://avatars0.githubusercontent.com/u/27562057?v=4" width="50px">
 
+Email Address: jwhiz113@gmail.com
